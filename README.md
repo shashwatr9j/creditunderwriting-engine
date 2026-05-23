@@ -9,10 +9,10 @@ Built for the **instant digital-lending** use case: 15-minute financing lines
 where an NBFC must form a defensible credit view in seconds from noisy,
 real-world signals.
 
-[![GitHub](https://img.shields.io/badge/GitHub-shashwatr9j%2Funderwriting--engine-181717?logo=github)](https://github.com/shashwatr9j/underwriting-engine)
+### [▶ Open Live Tool — localhost:8501](http://localhost:8501)
 
 > **Runs entirely on your machine — no cloud account needed.**
-> One-time setup takes ~2 minutes, then the UI is live at `http://localhost:8501`.
+> One-time setup takes ~2 minutes, then the UI is live at the link above.
 
 ### ▶ Quickstart (copy-paste)
 
