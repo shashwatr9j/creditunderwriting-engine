@@ -9,9 +9,26 @@ Built for the **instant digital-lending** use case: 15-minute financing lines
 where an NBFC must form a defensible credit view in seconds from noisy,
 real-world signals.
 
-[![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=shashwatr9j/underwriting-engine&branch=master&mainModule=app.py)
-&nbsp;
 [![GitHub](https://img.shields.io/badge/GitHub-shashwatr9j%2Funderwriting--engine-181717?logo=github)](https://github.com/shashwatr9j/underwriting-engine)
+
+> **Runs entirely on your machine — no cloud account needed.**
+> One-time setup takes ~2 minutes, then the UI is live at `http://localhost:8501`.
+
+### ▶ Quickstart (copy-paste)
+
+```bash
+git clone https://github.com/shashwatr9j/underwriting-engine.git
+cd underwriting-engine
+python -m venv .venv
+# Windows:
+.venv\Scripts\activate
+# macOS / Linux:
+# source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+**Windows users:** double-click `launch.bat` instead — it does all of the above automatically.
 
 ---
 
@@ -141,27 +158,12 @@ streamlit run app.py                                       # full UI
 
 ---
 
-## Quick Start
+## Setup Details
 
-### 1. Clone & create a virtual environment
+### (Optional) Enable LLM agents
 
-```bash
-git clone <your-repo-url>
-cd underwriting_engine
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-```
-
-### 2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. (Optional) Enable LLM agents
-
-The app runs fully without this step. To enable Claude-powered agents, create
-a `.env` file in the project root:
+The app runs fully in heuristic mode without any API key. To enable
+Claude-powered agents, create a `.env` file in the project root:
 
 ```env
 ANTHROPIC_API_KEY=sk-ant-your-key-here
@@ -170,13 +172,8 @@ ANTHROPIC_API_KEY=sk-ant-your-key-here
 # BASE_INTEREST_RATE=10.5
 ```
 
-### 4. Launch
-
-```bash
-streamlit run app.py
-```
-
-Open the local URL Streamlit prints (default `http://localhost:8501`).
+Then re-run `streamlit run app.py`. The UI will show **LLM agents available**
+and you can toggle between LLM and heuristic mode live.
 
 ---
 
