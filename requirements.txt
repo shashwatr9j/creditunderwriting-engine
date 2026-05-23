@@ -1,0 +1,21 @@
+# ──────────────────────────────────────────────────────────────────────────
+# Multi-Agent Alternative Credit Underwriting Engine — Dependencies
+# Python 3.10+ required
+# ──────────────────────────────────────────────────────────────────────────
+
+# Web UI
+streamlit==1.39.0
+
+# Data handling / display
+pandas==2.2.3
+
+# LLM provider (optional at runtime — engine falls back to local heuristics
+# if no API key is configured, so the app always runs).
+anthropic==0.69.0
+
+# Async HTTP (anthropic's transport dependency; this pairing is verified
+# compatible with anthropic 0.69.0).
+httpx==0.28.1
+
+# Environment variable loading from a local .env file
+python-dotenv==1.0.1
