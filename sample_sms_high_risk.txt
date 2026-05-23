@@ -1,0 +1,27 @@
+19-Jun-2025 14:19 Your LazyPay bill of INR 1,200 is due on 27th. Pay now to avoid late fees.
+02-Jun-2025 08:21 Debited INR 2,400 at DMart. UPI Ref 683333249
+13-Jun-2025 06:25 Debited INR 1,200 at KFC. UPI Ref 512765516
+24-Jun-2025 06:03 Debited INR 2,400 at Zepto. UPI Ref 198375819
+16-Jun-2025 20:07 Debited INR 320 at BESCOM. UPI Ref 508051171
+11-Jun-2025 00:06 Debited INR 149 at Zepto. UPI Ref 614964718
+18-Jun-2025 09:40 Debited INR 450 at Dominos. UPI Ref 200668241
+08-Jun-2025 07:01 HDFC: Credit of Rs 16,191 received via IMPS. Ref no 133730
+25-Jun-2025 04:00 Debited INR 450 at Myntra. UPI Ref 768034706
+05-Jun-2025 22:40 Debited INR 149 at Airtel. UPI Ref 941690348
+02-Jun-2025 12:14 Debited INR 1,850 at ACT Fibernet. UPI Ref 766724156
+25-Jun-2025 20:10 Auto-pay of INR 129 to YouTube Premium successful. Mandate ID 89008
+01-Jun-2025 13:56 HDFC: Credit of Rs 19,338 received via UPI. Ref no 241569
+14-Jun-2025 21:02 Debited INR 149 at Nykaa. UPI Ref 325130359
+15-Jun-2025 18:48 Debited INR 450 at Nykaa. UPI Ref 453639572
+22-Jun-2025 17:15 Debited INR 149 at Flipkart. UPI Ref 769342064
+24-Jun-2025 10:27 Your slice bill of INR 4,200 is due on 1th. Pay now to avoid late fees.
+30-Jun-2025 02:46 RummyCircle transaction successful: INR 500 debited. Txn ID 4845348
+30-Jun-2025 01:15 Dream11 transaction successful: INR 500 debited. Txn ID 7212939
+30-Jun-2025 01:50 Parimatch transaction successful: INR 5,000 debited. Txn ID 8836144
+30-May-2025 11:46 Debited INR 1,850 at Flipkart. UPI Ref 630200830
+30-Jun-2025 03:33 Parimatch transaction successful: INR 1,000 debited. Txn ID 8346872
+30-Jun-2025 03:38 RummyCircle transaction successful: INR 2,000 debited. Txn ID 9829866
+30-Jun-2025 23:43 RummyCircle transaction successful: INR 1,000 debited. Txn ID 1018307
+23-Jun-2025 10:33 HDFC: Credit of Rs 12,288 received via IMPS. Ref no 178592
+21-Jun-2025 20:11 Your uni bill of INR 4,200 is due on 13th. Pay now to avoid late fees.
+31-May-2025 06:00 Debited INR 780 at Amazon. UPI Ref 770097854

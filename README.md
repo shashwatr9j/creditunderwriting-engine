@@ -9,6 +9,10 @@ Built for the **instant digital-lending** use case: 15-minute financing lines
 where an NBFC must form a defensible credit view in seconds from noisy,
 real-world signals.
 
+[![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=shashwatr9j/underwriting-engine&branch=master&mainModule=app.py)
+&nbsp;
+[![GitHub](https://img.shields.io/badge/GitHub-shashwatr9j%2Funderwriting--engine-181717?logo=github)](https://github.com/shashwatr9j/underwriting-engine)
+
 ---
 
 ## Why this exists
@@ -245,6 +249,54 @@ SMS strings are intentionally inconsistent in format (varied timestamps,
 - **asyncio** — parallel agent orchestration
 - **Anthropic SDK** — optional LLM reasoning
 - **pandas** — tabular rendering
+
+---
+
+## Reference Data
+
+The repo ships three ready-to-use sample files so you can try every workflow
+without writing a single line of code.
+
+### `sample_profiles.json`
+
+A single JSON file containing all three archetype profiles in the exact schema
+the engine expects. Load any profile directly in Python:
+
+```python
+import json
+from engine import run_underwriting_sync
+
+with open("sample_profiles.json") as f:
+    profiles = json.load(f)
+
+# pick one: "prime" | "thin_file" | "high_risk"
+result = run_underwriting_sync(profiles["high_risk"], use_llm=False)
+print(result["decision"]["status"])       # → Rejected
+print(result["decision"]["risk_tier"])    # → Tier-3
+```
+
+### `sample_sms_*.txt` — paste-mode samples
+
+Three plain-text SMS dumps (one per archetype) ready to paste into the
+**Paste raw SMS** panel in the UI:
+
+| File | Archetype | Expected outcome |
+|------|-----------|-----------------|
+| `sample_sms_prime.txt` | High-earner, salaried | Tier-1 · Approved |
+| `sample_sms_thin_file.txt` | Gig income, BNPL-stacked | Tier-2 · Approved |
+| `sample_sms_high_risk.txt` | Gambling + credit hunger | Tier-3 · Rejected |
+
+Copy any file's contents, select **Paste raw SMS** in the UI, and hit
+**▶ Execute Underwriting Engine**.
+
+### CLI smoke test (all archetypes, deterministic)
+
+```bash
+python engine.py
+#  prime | Tier-1  Approved  DTI=  2.3% CIBIL=796 limit=INR 500,000
+#  thin_file | Tier-2  Approved  DTI= 35.8% CIBIL=706 limit=INR 150,000
+#  high_risk | Tier-3  Rejected  DTI= 50.5% CIBIL=613 limit=INR 0
+```
 
 ---
 

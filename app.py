@@ -458,33 +458,23 @@ def _render_certificate(decision: Dict[str, Any], engine_mode: str, total_ms: fl
                     <span class="uw-badge {tcls}">{tier} · {decision['risk_tier_label']}</span>
                     <div style="font-family:'IBM Plex Mono',monospace;font-size:0.8rem;
                                 margin-top:0.4rem;color:var(--ink-soft);">
-                        Status: <b class="{status_color}" style="color:{'#1f7a55' if status=='Approved' else '#a32f2f'}">{status}</b>
+                        Status: <b style="color:{'#1f7a55' if status=='Approved' else '#a32f2f'}">{status}</b>
                     </div>
-                </div>
-            </div>
-
-            <div class="uw-metric-row">
-                <div class="uw-metric">
-                    <div class="lbl">Sanction Limit</div>
-                    <div class="val">{loan_str}</div>
-                </div>
-                <div class="uw-metric">
-                    <div class="lbl">Interest Rate</div>
-                    <div class="val">{rate_str}</div>
-                </div>
-                <div class="uw-metric">
-                    <div class="lbl">DTI Ratio</div>
-                    <div class="val {_dti_class(decision['dti_pct'])}">{decision['dti_pct']}%</div>
-                </div>
-                <div class="uw-metric">
-                    <div class="lbl">CIBIL</div>
-                    <div class="val">{fin['cibil_score']}</div>
                 </div>
             </div>
         </div>
         """,
         unsafe_allow_html=True,
     )
+
+    # Key metrics as native Streamlit columns (more reliable than nested HTML divs)
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("Sanction Limit", loan_str)
+    m2.metric("Interest Rate", rate_str)
+    dti_delta = "Low" if decision['dti_pct'] < 35 else ("Moderate" if decision['dti_pct'] <= 50 else "High")
+    m3.metric("DTI Ratio", f"{decision['dti_pct']}%", delta=dti_delta,
+              delta_color="normal" if decision['dti_pct'] < 35 else "inverse")
+    m4.metric("CIBIL Score", fin['cibil_score'])
 
     # DTI breakdown table.
     st.markdown('<div class="uw-panel-label" style="margin-top:1.1rem;">DTI Computation</div>', unsafe_allow_html=True)
